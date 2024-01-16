@@ -95,6 +95,68 @@ img {
   background: #f9f9fb;
 }
 /* section .slide */
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  mask-origin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  border: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 50px;
+  text-indent: -9999px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /*background: #f0f0f0; 가 버튼 디폴트 */
+  overflow: hidden;
+  transition: all 0.2s;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: greenyellow;
+  width: 50px;
+}
+
+/* 슬라이더 자동재생 멈춤 버튼 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  font-size: 20px;
+  color: white;
+  margin-left: 60px;
+}
 
 #section .slide {
   /* 자식이 부모를 기준으로 배치될때 부모한테 주는 속성 */
@@ -116,17 +178,41 @@ img {
 }
 #section .slide .text h2 {
   font-size: 100px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 0.3s;
 }
 #section .slide .text p {
   font-size: 22px;
   margin: 30px 0 80px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 1.3s;
 }
 #section .slide .text a {
+  display: inline-block;
   font-size: 17px;
-  color: #14233e;
+  color: #58aedd;
   background: #fff;
   padding: 15px 35px;
   border-radius: 50px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text a {
+  animation: fadeInUp 1s 1 both 2.3s;
+}
+
+#section .product .text p {
+  font-size: 24px;
+  margin: 30px 0;
+  line-height: 1.5em;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
 }
 #section .slide .text a:hover {
   font-size: 17px;
@@ -203,11 +289,7 @@ img {
 }
 #section .product .text h2 {
   font-size: 70px;
-}
-#section .product .text p {
-  font-size: 24px;
-  margin: 30px 0;
-  line-height: 1.5em;
+  opacity: 0;
 }
 #section .product .text .button a {
   font-size: 14px;
@@ -216,6 +298,8 @@ img {
   display: inline-block;
   border-radius: 5px;
   margin-right: 10px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
 }
 #section .product .text .button a:nth-child(1) {
   background: #fff;
