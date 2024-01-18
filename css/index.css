@@ -159,7 +159,7 @@ img {
     0.5
   ); /*background: #f0f0f0; 가 버튼 디폴트 */
   overflow: hidden;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 #section .slideOuter .slideInner ul.slick-dots li.slick-active button {
   background: greenyellow;
@@ -292,8 +292,6 @@ img {
 #section .product {
   background: url(../img/product_bg.jpg) center / cover;
   padding: 100px 0;
-}
-#section .product .row {
   overflow: hidden;
 }
 
@@ -306,7 +304,7 @@ img {
   font-size: 70px;
 }
 #section .product .text .button a {
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 30px;
   border: 2px solid #fff;
   display: inline-block;

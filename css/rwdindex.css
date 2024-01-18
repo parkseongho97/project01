@@ -92,6 +92,10 @@
   }
 
   /* 슬라이드 텍스트 */
+  #section .slide img {
+    width: auto;
+    min-height: 372px;
+  }
   #section .slide .text h2 {
     font-size: 40px;
     opacity: 0;
@@ -122,6 +126,9 @@
     font-weight: bold;
     transition: all 0.2s;
     margin-top: 30px;
+  }
+  #section .slick-current.slick-active .slide .text a {
+    animation: fadeInUp 1s 1 both 1.3s;
   }
 
   #section .slide .text {
