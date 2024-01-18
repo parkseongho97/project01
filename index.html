@@ -22,6 +22,7 @@
     <!-- 파비콘 (32*32) -->
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/rwdindex.css" />
     <link rel="shortcut icon" href="파비콘이미지경로(확장자는 ico,png 가능)" />
     <link
       rel="stylesheet"
@@ -53,13 +54,16 @@
   </head>
 
   <body>
+    <!-- header 구역 -->
     <div id="header">
       <div class="row cf">
         <h1>
-          <a href="#">
-            <img src="./img/main-logo.png" alt="company" />
-          </a>
+          <a href="#"> <span class="blind">company</span> </a>
         </h1>
+        <div class="menuopen">
+          <span class="blind">메뉴열기</span>
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <div id="nav">
           <ul class="depth1">
             <li>
@@ -87,17 +91,18 @@
         </div>
       </div>
     </div>
-
+    <!-- section구역 -->
     <div id="section">
+      <!-- slide 구역 -->
       <div class="slideOuter">
         <div class="slideInner">
           <div class="slide">
             <img src="./img/silde1.jpg" alt="slideimage1" />
-            <div class="text">
+            <div class="text row">
               <h2>Business Proposal</h2>
               <p>
-                우리는 신뢰를 기반으로 고객중심의 최상의 서비스를<br />
-                제공할 수 있도록 최선을 다하겠습니다.
+                우리는 신뢰를 기반으로 고객중심의 최상의 서비스를 제공할 수
+                있도록 최선을 다하겠습니다.
               </p>
               <a href="#">자세히 보기</a>
             </div>
@@ -107,8 +112,8 @@
             <div class="text">
               <h2>Solution System</h2>
               <p>
-                우리는 신뢰를 기반으로 고객중심의 최상의 서비스를<br />
-                제공할 수 있도록 최선을 다하겠습니다.
+                우리는 신뢰를 기반으로 고객중심의 최상의 서비스를 제공할 수
+                있도록 최선을 다하겠습니다.
               </p>
               <a href="#">자세히 보기</a>
             </div>
@@ -191,6 +196,7 @@
         </div>
       </div>
     </div>
+    <!-- footer구역 -->
     <div id="footer">
       <div class="address">
         <div class="row">

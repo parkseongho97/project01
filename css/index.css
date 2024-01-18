@@ -7,8 +7,16 @@
 
   /* box-sizing: border-box; */
 }
+html {
+  font-size: 16px;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
 }
 ul {
   list-style: none;
@@ -47,6 +55,19 @@ img {
   float: left;
   padding: 20px 0;
 }
+#header h1 a {
+  width: 250px;
+  height: 50px;
+  display: block;
+  background: url(../img/main-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+#header .menuopen {
+  display: none;
+}
+
 #header #nav {
   float: right;
 }
@@ -60,8 +81,8 @@ img {
   border-top: 3px solid transparent;
 }
 #header #nav .depth1 > li > a {
-  line-height: 87.81px;
-  height: 87.81px;
+  line-height: 100px;
+  height: 100px;
   display: block;
 }
 #header #nav .depth1 > li:hover {
@@ -177,7 +198,7 @@ img {
   text-align: center;
 }
 #section .slide .text h2 {
-  font-size: 100px;
+  font-size: 8vh;
   opacity: 0;
   transform: translate3d(0, 100%, 0);
 }
@@ -186,6 +207,8 @@ img {
   opacity: 0;
   transform: translate3d(0, 100%, 0);
   margin: 30px 0 80px;
+  /* 한글단어잘림 허용 안하는 속성 */
+  word-break: keep-all;
 }
 #section .slide .text a {
   font-size: 17px;
@@ -281,7 +304,6 @@ img {
 }
 #section .product .text h2 {
   font-size: 70px;
-  opacity: 0;
 }
 #section .product .text .button a {
   font-size: 14px;
@@ -290,7 +312,6 @@ img {
   display: inline-block;
   border-radius: 5px;
   margin-right: 10px;
-  opacity: 0;
   transform: translate3d(0, 100%, 0);
 }
 #section .product .text .button a:nth-child(1) {
