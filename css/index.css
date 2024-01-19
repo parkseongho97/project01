@@ -51,9 +51,16 @@ img {
   width: 100%;
   z-index: 99; /* 박스겹침이 발생했을때 겹치는 순서를 제어함. 높은값이 위로 올라옴 */
 }
+#header .row {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: stretch; 기본값이라 생략가능 */
+}
 #header h1 {
-  float: left;
-  padding: 20px 0;
+  padding: 0px 0;
+  display: flex;
+  align-items: center;
 }
 #header h1 a {
   width: 250px;
@@ -62,29 +69,32 @@ img {
   background: url(../img/main-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 10px;
 }
 #header .menuopen {
   display: none;
 }
 
 #header #nav {
-  float: right;
+  display: flex;
 }
 /* #header #nav .depth1 { background:pink } */
+
+#header #nav .depth1 {
+  display: flex;
+}
+
 #header #nav .depth1 > li {
-  float: left;
+  /* float: left; */
+  display: flex;
+  align-items: center;
+
   margin-left: 48px;
   color: #fff;
   font-size: 18px;
   position: relative;
   border-top: 3px solid transparent;
 }
-#header #nav .depth1 > li > a {
-  line-height: 100px;
-  height: 100px;
-  display: block;
-}
+
 #header #nav .depth1 > li:hover {
   color: greenyellow;
   transition: all 0.2s;
@@ -241,11 +251,13 @@ img {
 
 /* section business */
 #section .business ul {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
 }
 #section .business ul li {
-  float: left;
-  width: 25%;
+  /* float: left; */
+  /* width: 25%; */
+  flex: 1;
   text-align: center;
   height: 600px;
   padding: 100px 30px;
@@ -294,10 +306,14 @@ img {
   padding: 100px 0;
   overflow: hidden;
 }
-
+#section .product .row {
+  /* overflow: hidden; */
+  display: flex;
+}
 #section .product .text {
-  float: left;
-  width: 50%;
+  /* float: left; */
+  /* width: 50%; */
+  flex: 1;
   color: #fff;
 }
 #section .product .text h2 {
@@ -317,8 +333,9 @@ img {
   color: #333;
 }
 #section .product .photo {
-  float: left;
-  width: 50%;
+  /* float: left; */
+  /* width: 50%; */
+  flex: 1;
   text-align: center;
   padding-top: 70px;
 }
@@ -326,20 +343,23 @@ img {
   background: #edf0f4;
   padding: 50px 0;
 }
-#section .customer h2 {
+#section .customer .row h2 {
   font-weight: lighter;
   font-size: 70px;
   color: #333;
-  text-align: center;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 #section .customer .row div {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
 }
 #section .customer .row div span {
-  width: 33.33%;
-  float: left;
-  padding: 0 20px;
+  /* width: 33.33%; */
+  /* float: left; */
+  /* padding: 0 15px; */
+  flex: 1;
+  margin: 0 15px;
 }
 #section .customer .row div span img {
   border: 1px solid rgb(227, 227, 227);
